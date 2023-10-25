@@ -46,7 +46,7 @@ const Bankdetails = ({isMobileView}) => {
       <div className="flex">
         <VerticalNav />
         <div className={`details mx-3 flex justify-center ${isMobileView ? 'w-screen':'w-3/4'}`}>
-          <div className="flex  justify-center h-screen">
+          <div className={`flex  justify-center h-screen container ${isMobileView ? 'w-full':'w-3/5'}`}>
             <div className="flex flex-col rounded-lg">
               <div className="mt-10">
                 <h1 className="font-bold text-4xl">Update Bank Details</h1>
@@ -64,7 +64,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="name"
                     name="name"
-                    className={`w-full px-4 py-2 text-gray-600  rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full px-4 py-2 text-gray-600  rounded-lg border border-black focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={ formData.name}
                     readOnly={!isEditMode}
@@ -80,7 +80,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="accountnumber"
                     name="accountnumber"
-                    className={`w-full text-gray-600 border border-black px-4 py-2  rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full text-gray-600 border border-black px-4 py-2  rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={formData.accountnumber}
                     readOnly={!isEditMode}
@@ -95,7 +95,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="ifsccode"
                     name="ifsccode"
-                    className={`w-full text-gray-600  border-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full text-gray-600  border-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={formData.ifsccode}
                     readOnly={!isEditMode}
@@ -110,7 +110,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="bankname"
                     name="bankname"
-                    className={`w-full text-gray-600  border-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full text-gray-600  border-black px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={formData.bankname}
                     readOnly={!isEditMode}
@@ -125,7 +125,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="bankcity"
                     name="bankcity"
-                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={formData.bankcity}
                     readOnly={!isEditMode}
@@ -140,7 +140,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="branchname"
                     name="branchname"
-                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500  ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500  ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={formData.branchname}
                     readOnly={!isEditMode}
@@ -158,7 +158,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="relation"
                     name="relation"
-                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500  ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500  ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={formData.relation}
                     readOnly={!isEditMode}
@@ -176,7 +176,7 @@ const Bankdetails = ({isMobileView}) => {
                     type="text"
                     id="consent"
                     name="consent"
-                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-gray-400' : 'bg-white'}`}
+                    className={`w-full text-gray-600 px-4 py-2 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 ${!isEditMode ? 'bg-green-200' : 'bg-white'}`}
                     required
                     value={formData.consent}
                     readOnly={!isEditMode}
@@ -194,6 +194,9 @@ const Bankdetails = ({isMobileView}) => {
                   {isEditMode ? "Save" : "Edit"}
                 </button>
               </form>
+              <div className="msg w-full">
+                <p className="text-sm">THE ABOVE DETAILS ARE FINAL AND WILL BE USED FOR PAYMENTS, IF ANY OF THESE DETAILS ARE WRONG, PLEASE CONTACT YOUR MANAGER IMMEDIATELY! ALSO EMAIL THE SAME TO ACCOUNTS@EXAMBAZAAR.COM! </p>
+              </div>
             </div>
           </div>
         </div>

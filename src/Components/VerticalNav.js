@@ -91,7 +91,7 @@ const VerticalNav = () => {
         }`}
         onClick={toggleMobileNav}
       >
-        <i className="fas fa-bars text-2xl text-gray-500"></i>
+        <i className="fa-solid fa-arrow-right text-2xl text-gray-500"></i>
       </div>
       <div
         className={`md:hidden my-2 fixed top-30 right-4 cursor-pointer z-150 ${
